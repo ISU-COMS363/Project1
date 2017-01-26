@@ -9,3 +9,5 @@ java Demo.ProcessRelation1
 pause
 java Demo.PrintRelation2
 pause
+java Demo.PrintRelation3
+pause

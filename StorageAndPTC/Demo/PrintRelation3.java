@@ -2,15 +2,21 @@ package Demo;
 
 import Demo.GetTupleFromRelationIterator;
 
-public class PrintRelation2{
+public class PrintRelation3{
 	public static void main(String args[]) throws Exception{
-    System.out.println("PrintRelation2");
+    System.out.println("PrintRelation3");
 		System.out.println("The tuples after loading file to Relation are: ");
 		GetTupleFromRelationIterator getTupleFromRelationIterator= new GetTupleFromRelationIterator("myDisk1", 31, 11);
 		getTupleFromRelationIterator.open();
 		while(getTupleFromRelationIterator.hasNext()){
 			byte [] tuple = getTupleFromRelationIterator.next();
-			System.out.println(new String(tuple).substring(0, 23)+", "+ new String(tuple).substring(23,27)+", "+ toInt(tuple, 27));
+      String strTuple = new String(tuple);
+      String name = strTuple.substring(0, 23);
+      String field = strTuple.substring(23, 27);
+      int salary = toInt(tuple, 27);
+      if (salary >= 50000) {
+          System.out.println(name + ", " +  field + ", " + salary);
+      }
 		}
 	}
 

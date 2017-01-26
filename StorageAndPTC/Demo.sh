@@ -11,3 +11,5 @@ eval "java Demo.ProcessRelation1"
 read -rsp $'Press enter to continue...\n'
 eval "java Demo.PrintRelation2"
 read -rsp $'Press enter to continue...\n'
+eval "java Demo.PrintRelation3"
+read -rsp $'Press enter to continue...\n'
